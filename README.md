@@ -1,13 +1,21 @@
 # Simulasi Topologi Jaringan Perkantoran Multi-Divisi
 
-Proyek portofolio pertama dalam bidang *Network Fundamentals* menggunakan **Cisco Packet Tracer**. Simulasi ini merancang jaringan lokal (LAN) untuk sebuah perkantoran yang dibagi ke dalam beberapa divisi dengan menerapkan konsep *Subnetting* dan *Routing* antar-subnetwork.
+Dokumentasi proyek portofolio jaringan komputer ini disusun guna memenuhi standar *Network Fundamentals* menggunakan perangkat lunak **Cisco Packet Tracer**. Proyek ini merancang dan mengimplementasikan jaringan lokal (*Local Area Network* / LAN) skala perkantoran yang terbagi ke dalam beberapa divisi dengan menerapkan teknik *Subnetting* dan *Routing* antar-subnetwork.
 
 ---
 
-## 📋 Detail Topologi & Alokasi IP
-Proyek ini menggunakan network utama **`192.168.1.0/26`** (`255.255.255.192`) yang dipecah menjadi beberapa subnet terisolasi:
+## 📐 Skema Topologi Jaringan
+Berikut adalah gambaran keseluruhan topologi jaringan yang telah dirancang dan diimplementasikan untuk menghubungkan seluruh divisi:
 
-| Divisi | Range IP PC (Usable) | IP Default Gateway (Router) | Subnet Mask |
+![Topologi Jaringan Keseluruhan](nama-file-gambar-topologi.png)
+*(Keterangan: Menampilkan keseluruhan arsitektur jaringan yang terdiri dari 1 unit Router, 3 unit Switch, serta perangkat PC yang terbagi ke dalam Divisi IT, Divisi HR, dan Divisi Finance).*
+
+---
+
+## 📋 Alokasi Pengalamatan IP (Subnetting)
+Proyek ini menggunakan blok alamat IP privat kelas C dengan network utama **`192.168.1.0/26`** (`255.255.255.192`) yang dibagi secara terstruktur menjadi tiga subnetwork terisolasi:
+
+| Divisi | Range Alokasi IP (Usable) | IP Default Gateway (Router) | Subnet Mask |
 | :--- | :--- | :--- | :--- |
 | **Divisi IT** | `192.168.1.2` - `192.168.1.62` | `192.168.1.1` | `255.255.255.192` |
 | **Divisi HR** | `192.168.1.66` - `192.168.1.126` | `192.168.1.65` | `255.255.255.192` |
@@ -15,14 +23,23 @@ Proyek ini menggunakan network utama **`192.168.1.0/26`** (`255.255.255.192`) ya
 
 ---
 
-## 🛠️ Poin Konfigurasi Teknis
-* **Router:** Menggunakan port interface fisik (`GigabitEthernet0/0`, `0/1`, `0/2`) yang bertindak sebagai *Default Gateway* untuk masing-masing divisi.
-* **Switch:** Menggunakan Switch Layer 2 untuk mendistribusikan koneksi lokal di tiap divisi.
-* **Routing Antar-Subnet:** Berhasil menghubungkan komunikasi lintas divisi yang berbeda network secara *seamless* setelah melalui proses *ARP resolution*.
+## ⚙️ Konfigurasi Perangkat & Pengujian
+
+### 1. Konfigurasi Antarmuka Router (Gateway)
+Router dikonfigurasi menggunakan antarmuka fisik (*Physical Interface*) pada tiap port (*GigabitEthernet*) yang bertindak sebagai pintu gerbang (*Default Gateway*) bagi masing-masing subnetwork divisi.
+
+![Konfigurasi Router](nama-file-gambar-konfigurasi-router.png)
+*(Keterangan: Screenshot tampilan konfigurasi IP Address dan status port pada perangkat Router).*
+
+### 2. Pengujian Koneksi Lintas Divisi (Ping Test)
+Pengujian komunikasi antar-divisi dilakukan untuk memastikan bahwa proses *routing* berjalan dengan baik dan paket data dapat diteruskan secara akurat setelah proses resolusi ARP selesai.
+
+![Uji Koneksi Berhasil](nama-file-gambar-hasil-ping.png)
+*(Keterangan: Screenshot bukti pengujian komunikasi atau status pengiriman paket yang berhasil).*
 
 ---
 
-## 🚀 Cara Menjalankan Proyek
-1. Pastikan komputer lo sudah terinstal aplikasi **Cisco Packet Tracer**.
-2. Download file proyek berformat **`.pkt`** dari repository ini.
-3. Buka file tersebut menggunakan Cisco Packet Tracer untuk melihat skema topologi dan menguji koneksi (*ping* / kirim amplop antar divisi).
+## 🚀 Panduan Penggunaan
+1. Pastikan aplikasi **Cisco Packet Tracer** telah terinstal pada perangkat Anda.
+2. Unduh berkas proyek berformat **`.pkt`** yang tersedia pada repository ini.
+3. Buka berkas tersebut melalui aplikasi Cisco Packet Tracer untuk meninjau detail konfigurasi secara langsung dan melakukan pengujian ulang.

@@ -32,13 +32,27 @@ Proyek ini menggunakan blok alamat IP privat kelas C dengan network utama **`192
 ### 1. Konfigurasi Antarmuka Router (Gateway)
 Router dikonfigurasi menggunakan antarmuka fisik (*Physical Interface*) pada tiap port (*GigabitEthernet*) yang bertindak sebagai pintu gerbang (*Default Gateway*) bagi masing-masing subnetwork divisi.
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/e4f4255c-ab56-471f-ac1f-599de8ff4fc6" alt="Konfigurasi Router IT" width="260" style="margin: 5px;">
-  <img src="https://github.com/user-attachments/assets/7c9961a2-91dc-4781-ac50-6a589917985b" alt="Konfigurasi Router HR" width="260" style="margin: 5px;">
-  <img src="https://github.com/user-attachments/assets/db7e75dc-834b-4199-b647-355372d3e694" alt="Konfigurasi Router Finance" width="260" style="margin: 5px;">
+<div align="center">
+  <table border="0" style="border-collapse: collapse; border: none;">
+    <tr style="border: none;">
+      <td align="center" style="border: none; padding: 10px;">
+        <strong>Konfigurasi Divisi IT</strong><br><br>
+        <img src="https://github.com/user-attachments/assets/e4f4255c-ab56-471f-ac1f-599de8ff4fc6" alt="Konfigurasi Router IT" width="250">
+      </td>
+      <td align="center" style="border: none; padding: 10px;">
+        <strong>Konfigurasi Divisi HR</strong><br><br>
+        <img src="https://github.com/user-attachments/assets/7c9961a2-91dc-4781-ac50-6a589917985b" alt="Konfigurasi Router HR" width="250">
+      </td>
+      <td align="center" style="border: none; padding: 10px;">
+        <strong>Konfigurasi Divisi Finance</strong><br><br>
+        <img src="https://github.com/user-attachments/assets/db7e75dc-834b-4199-b647-355372d3e694" alt="Konfigurasi Router Finance" width="250">
+      </td>
+    </tr>
+  </table>
   <br>
   <em>(Keterangan: Screenshot tampilan konfigurasi IP Address dan status port pada perangkat Router untuk masing-masing divisi).</em>
-</p>
+</div>
+
 
 
 

@@ -7,7 +7,7 @@ Dokumentasi proyek portofolio jaringan komputer ini disusun guna memenuhi standa
 ## 📐 Skema Topologi Jaringan
 Berikut adalah gambaran keseluruhan topologi jaringan yang telah dirancang dan diimplementasikan untuk menghubungkan seluruh divisi:
 
-![Topologi Jaringan Keseluruhan](nama-file-gambar-topologi.png)
+![Topologi Jaringan Keseluruhan](<img width="1920" height="1080" alt="Screenshot (236)" src="https://github.com/user-attachments/assets/4d7e546c-d890-4c06-be3d-53d0f264e950" />)
 *(Keterangan: Menampilkan keseluruhan arsitektur jaringan yang terdiri dari 1 unit Router, 3 unit Switch, serta perangkat PC yang terbagi ke dalam Divisi IT, Divisi HR, dan Divisi Finance).*
 
 ---
